@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Own Custom css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Own Custom css End -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travelopedia</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="home-page">
+
+  <!-- Popup Modal -->
+  <div id="popupModal" class="popup-overlay">
+    <div class="popup-box animate-popup">
+      <button class="popup-close" onclick="closePopup()">x</button>
+      <img src="/Photo/popup page.png" alt="Travel Offer" class="img-fluid" />
+    </div>
+  </div>
+  <!-- Popup Modal End -->
+
+  <!-- Mini Navbar -->
+   <div class="top-navbar">
+     <div class="left-info">
+    <span id="datetime"></span>
+       </div>
+       <div class="right-links">
+    <a href="index.html">Home</a>
+    <a href="#why-choose-us">Our Speciality</a>
+    <a href="#about-us">About Us</a>
+    <a href="#FAQ">FAQ</a>
+     </div>
+   </div>
+  <!-- Mini Navbar End -->
+
+  <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light nav-color-setting">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Travelopedia</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <i class="fa-solid fa-taxi"></i>
+          <a class="nav-link" href="https://www.rapido.bike/Home">Local Cabs</a>
+        </li>
+        <li class="nav-item">
+          <i class="fa-solid fa-train"></i>
+          <a class="nav-link" href="https://www.redbus.in/">Buses & Trains</a>
+        </li>
+        <li class="nav-item">
+          <i class="fa-solid fa-plane-departure"></i>
+          <a class="nav-link" href="https://www.airindia.com/?utm_source=google&utm_medium=cpc&utm_campaign=Acquisition_Perform_SEM_Alltraveltype_India_BAU_Prospecting_Brand_Core_Allrout_Allsector_NullHaul_NullB_EM&gad_source=1&gad_campaignid=20459182687&gbraid=0AAAAAqGPw-FfPF6lRvFVUH_VhaRvv_4Zb&gclid=Cj0KCQjw_L_FBhDmARIsAItqgt5AfmUqrb5a9JU7FKVG-Fqpl3KRb7SCPEQbAjSVn7-BRSyHqJ60TmoaAiQ6EALw_wcB">Flights</a>
+        </li>
+        <li class="nav-item">
+          <i class="fa-solid fa-umbrella-beach"></i>
+          <a class="nav-link" href="#Domestic">Domestic Plans</a>
+        </li>
+        <li class="nav-item">
+          <i class="fa-solid fa-bed"></i>
+          <a class="nav-link" href="https://in.hotels.com/">Hotels</a>
+        </li>
+        <li class="nav-item">
+          <i class="fa-solid fa-earth-americas"></i>
+          <a class="nav-link" href="#international-tours">International Travel Plans</a>
+        </li>
+        <li class="nav-item dropdown">
+          <i class="fa-solid fa-paperclip"></i>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Documentations
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="https://www.airindia.com/in/en/travel-information/visa-services.html">E-Visa / Sticker Visa</a></li>
+            <li><a class="dropdown-item" href="https://www.westernunion.com/in/en/currency-converter.html">Money Exchange</a></li>
+            <li><a class="dropdown-item" href="https://www.acko.com/travel-insurance/">Travel Insurance</a></li>
+            <li><a class="dropdown-item" href="https://matrix.in/collections/esims?srsltid=AfmBOopKZF-av6f-lFd815aUxmg0AcabrlHb4NBojVjKt4GynPj8CczZ">E-Sim</a></li>
+            <li><a class="dropdown-item" href="https://www.hdfcbank.com/personal/pay/cards/forex-cards">Forex Card</a></li>
+          </ul>
+        </li>
+        </ul>
+        <div class="login">
+          <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            My Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#accountModal">Login</a></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#accountModal">Register</a></li>
+            <li><a class="dropdown-item" href="#">Switch Account</a></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Guest Login</a></li>
+          </ul>
+        </div>
+        </div>
+    </div>
+  </div>
+</nav>
+  <!-- Navbar End -->
+
+  <!-- Search Bar -->
+   <div class="search-container mx-auto">
+        <form class="search-box" action="/search" method="GET">
+          <input type="search" name="s" placeholder="Search.....">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+  <!-- Search Bar End -->
+
+  <!-- Carousel -->
+  <div id="travelCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/kerala banner.jpg" class="w-100" alt="Kerala">
+              <h5>Kerala</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/banner kashmir.jpg" class="w-100" alt="Kashmir">
+              <h5>Kashmir</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/Nagaland.jpg" class="w-100" alt="Nagaland">
+              <h5>Nagaland</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/germany banner.webp" class="w-100" alt="Germany">
+              <h5>Germany</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/london banner.jpg" class="w-100" alt="England">
+              <h5>London</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/paris banner.webp" class="w-100" alt="Paris">
+              <h5>Paris</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/russia banner.jpg" class="w-100" alt="Russia">
+              <h5>Russia</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/uzbekistan banner.jpg" class="w-100" alt="Uzbekistan">
+              <h5>Uzbekistan</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/kazakhstan banner.jpg" class="w-100" alt="Kazakhstan">
+              <h5>Kazakhstan</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/srilanka banner.jpg" class="w-100" alt="Srilanka">
+              <h5>Srilanka</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/mayanmar banner.avif" class="w-100" alt="Mayanmar">
+              <h5>Mayanmar</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/maldives banner.jpg" class="w-100" alt="Maldives">
+              <h5>Maldives</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/japan banner.jpg" class="w-100" alt="Japan">
+              <h5>Japan</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/Indonesia banner.png" class="w-100" alt="Indonesia">
+              <h5>Indonesia</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="destination-card">
+              <img src="Photo/Thailand banner.webp" class="w-100" alt="Thailand">
+              <h5>Thailand</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#travelCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#travelCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+  <!-- Carousel End -->
+
+
+<!-- International Tours Section -->
+<section id="international-tours">
+  <div class="section-header">
+    <h2 class="section-international">Popular International Packages</h2>
+  </div>
+
+  <div class="int-tour-container">
+    <!-- Tour Card 1 -->
+    <div class="int-tour-card">
+      <img src="Photo/paris.webp" alt="Paris">
+      <div class="int-tour-overlay">
+        <h3>Paris, France</h3>
+        <p>5 Nights / 6 Days</p>
+        <div class="trip-buttons">
+          <a href="#" class="btn-book">Book</a>
+          <a href="#" class="btn-contact">Details</a>
+        </div>
+      </div>
+    </div>
+    <!-- Tour Card 2 -->
+    <div class="int-tour-card">
+      <img src="Photo/dubai.avif" alt="Dubai">
+      <div class="int-tour-overlay">
+        <h3>Dubai, UAE</h3>
+        <p>4 Nights / 5 Days</p>
+        <div class="trip-buttons">
+          <a href="#" class="btn-book">Book</a>
+          <a href="#" class="btn-contact">Details</a>
+        </div>
+      </div>
+    </div>
+    <!-- Tour Card 3 -->
+    <div class="int-tour-card">
+      <img src="Photo/bali.webp" alt="Bali">
+      <div class="int-tour-overlay">
+        <h3>Bali, Indonesia</h3>
+        <p>6 Nights / 7 Days</p>
+        <div class="trip-buttons">
+          <a href="#" class="btn-book">Book</a>
+          <a href="#" class="btn-contact">Details</a>
+        </div>
+      </div>
+    </div>
+    <!-- Tour Card 4 -->
+    <div class="int-tour-card">
+      <img src="Photo/egypt.webp" alt="Egypt">
+      <div class="int-tour-overlay">
+        <h3>Giza, Egypt</h3>
+        <p>5 Nights / 6 Days</p>
+        <div class="trip-buttons">
+          <a href="#" class="btn-book">Book</a>
+          <a href="#" class="btn-contact">Details</a>
+        </div>
+      </div>
+    </div>
+    <!-- Tour Card 5 -->
+    <div class="int-tour-card">
+      <img src="Photo/switzerland.avif" alt="Switzerland">
+      <div class="int-tour-overlay">
+        <h3>Switzerland</h3>
+        <p>7 Nights / 8 Days</p>
+        <div class="trip-buttons">
+          <a href="#" class="btn-book">Book</a>
+          <a href="#" class="btn-contact">Details</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="more-packages-container">
+  <a href="international.html" class="more-packages-btn">More International Packages</a>
+</div>
+<!-- International Section End -->
+
+  <!-- Title -->
+   <section id="Domestic">
+   <div class="Domestic">
+     <h2 class="section-heading-domestic">Popular Domestic Destinations</h2>
+   </div>
+   </section>
+  <!-- Card Section -->
+
+  <div class="bottom">
+   <!-- Card 1-->
+ <div class="card" style="width: 18rem;">
+  <img src="Photo/Goa.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Goa Fun Fiesta</h5>
+    <h6 class="card-subtitle">4 Night 5 days</h6>
+    <div class="card-text">
+      <li>Round Trip Flights</li>
+      <li> Airport Transfer</li>
+      <li>Selected Meals</li>
+      <li>4 Star Hotel</li>
+      <li>1 Activity</li>
+    </div>
+      <p class="special">ATV Advanture Ride at Beach</p>
+      <div class="primery">
+    <a href="#" class="btn btn-primary">Get More Details</a>
+    </div>
+  </div>
+</div>
+<!-- Card 2 -->
+<div class="card" style="width: 18rem;">
+  <img src="Photo/Kashmir.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Kashmir Tour</h5>
+    <h6 class="card-subtitle">6 Night 7 days</h6>
+    <div class="card-text">
+      <li>Round Trip Flights</li>
+      <li>3 Activities</li>
+      <li>Intercity Car Transfers</li>
+      <li>Airport Transfers</li>
+      <li>Selected Meals</li>
+    </div>
+    <p class="special">Gondola Ride, Nishat Garden</p>
+    <div class="primery">
+    <a href="#" class="btn btn-primary">Get More Details</a>
+    </div>
+  </div>
+</div>
+<!-- Card 3 -->
+<div class="card" style="width: 18rem;">
+  <img src="Photo/Meghalaya.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">North-East Tour</h5>
+    <h6 class="card-subtitle">5 Night 6 days</h6>
+    <div class="card-text">
+      <li>Round Trip Flights</li>
+      <li>4 Star, 3 Star Hotels</li>
+      <li>Intercity Car Transfers</li>
+      <li>4 Activities</li>
+      <li>Airport Pickup & Drop</li>
+    </div>
+    <p class="special">Bath at Waterfalls, Local Lunch</p>
+    <div class="primery">
+    <a href="#" class="btn btn-primary">Get More Details</a>
+    </div>
+  </div>
+</div>
+<!-- Card 4 -->
+<div class="card" style="width: 18rem;">
+  <img src="Photo/offbeat darjeeling .jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Offbeat Darjeeling Tour</h5>
+    <h6 class="card-subtitle">3 Night 4 days</h6>
+    <div class="card-text">
+      <li> Round Trip Flights</li>
+      <li>Intercity Car Transfers</li>
+      <li>4 Star Hotels</li>
+      <li>8 Activities</li>
+      <li>Airport Transfers</li>
+    </div>
+    <p class="special">Dilicious Lunch - Local Cuisine</p>
+    <div class="primery">
+    <a href="#" class="btn btn-primary">Get More Details</a>
+    </div>
+  </div>
+</div>
+<!-- Card 5 -->
+ <div class="card" style="width: 18rem;">
+  <img src="Photo/Kerala.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Kerala-Karnataka Tour</h5>
+    <h6 class="card-subtitle">5 Night 6 days</h6>
+    <div class="card-text">
+      <li>Round Trip Flights</li>
+      <li>Intercity Car Transfers</li>
+      <li>3 Star Hotels</li>
+      <li>Airport Transfers</li>
+      <li>6 Activities</li>
+    </div>
+    <p class="special">Spice Garden Tour, Periyar Lake</p>
+    <div class="primery">
+    <a href="#" class="btn btn-primary">Get More Details</a>
+    </div>
+  </div>
+</div>
+
+ </div>
+ <!-- Domestic Section End -->
+
+ <!-- More Domestic Button -->
+ <div class="more-domestic-container">
+  <a href="domestic.html" class="more-domestic-btn">More Domestic Plans</a>
+  </div>
+<!-- More Domestic End -->
+
+
+  <!-- Account Modal -->
+   <div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="accountModalLabel">My Account</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+          <!-- Nav Tabs -->
+            <ul class="nav nav-tabs" id="accountTab" role="tablist">
+             <li class="nav-item" role="presentation">
+               <button class="nav-link" id="login-tab" data-bs-toggle="tab" data-bs-target="#loginTab" type="button" role="tab" aria-controls="loginTab"   aria-selected="true">Login</button>
+             </li>
+             <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="register-tab" data-bs-toggle="tab" data-bs-target="#registerTab" type="button" role="tab" aria-controls="registerTab" aria-selected="false">Register</button>
+             </li>
+             </ul>
+             <!-- Tab Content -->
+              <div class="tab-content pt-3" id="accountTabContent">
+                <!-- Login Form -->
+                 <div class="tab-pane fade show active" id="loginTab" role="tabpanel" aria-labelledby="login-tab">
+                  <form>
+                    <div class="mb-3">
+                      <label for="loginEmail" class="form-label">Email Address</label>
+                      <input type="email" class="form-control" id="loginEmail" required>
+                    </div>
+                    <div class="mb-3 position-relative">
+                      <label for="loginpassword" class="form-label">Password</label>
+                      <input type="password" class="form-control pe-5" id="loginPassword" minlength="8" required>
+                      <button type="button" class="eye-icon" onclick="togglePassword('loginPassword', this)">🐵</button>
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="loginCheck">
+                      <label class="form-check-label" for="loginCheck">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                  </form>
+                 </div>
+                 <!-- Register Form -->
+                  <div class="tab-pane fade" id="registerTab" role="tabpanel" aria-labelledby="register-tab">
+                    <form>
+                    <div class="mb-3">
+                      <label for="registerEmail" class="form-label">Email Address</label>
+                      <input type="email" class="form-control" id="registerEmail" required>
+                    </div>
+                    <div class="mb-3 position-relative">
+                      <label for="registerPassword" class="form-label">Password</label>
+                      <input type="password" class="form-control pe-5" id="registerPassword" minlength="8" required>
+                      <button type="button" class="eye-icon" onclick="togglePassword('registerPassword', this)">🐵</button>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Register</button>
+                  </form>
+                 </div>
+              </div>
+          </div>
+        </div>
+      </div>
+     </div>
+  <!-- Account Modal End -->
+
+  <!-- Why Chose US -->
+<section id="why-choose-us">
+  <h2 class="section-heading">Why Choose Us?</h2>
+  <div class="reasons">
+    <div class="reason-box">
+      <i class="fas fa-user-check"></i>
+      <h3>Trusted by Thousands</h3>
+      <p>Over 10,000 travelers trust us for smooth, safe & memorable journeys every year.</p>
+    </div>
+    <div class="reason-box">
+      <i class="fas fa-mountain"></i>
+      <h3>Unique Destinations</h3>
+      <p>Explore offbeat locations & curated adventures that regular tours can’t offer.</p>
+    </div>
+    <div class="reason-box">
+      <i class="fas fa-user-tie"></i>
+      <h3>Expert Trip Captains</h3>
+      <p>Professional & friendly leaders to ensure your experience is fun and stress-free.</p>
+    </div>
+    <div class="reason-box">
+      <i class="fas fa-globe-asia"></i>
+      <h3>All-Inclusive Plans</h3>
+      <p>Hotels, flights, transfers — we plan and manage it all for you, end-to-end.</p>
+    </div>
+    <div class="reason-box">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Top-Notch Safety</h3>
+      <p>Safety is our top priority. We follow all health & travel protocols strictly.</p>
+    </div>
+    <div class="reason-box">
+      <i class="fas fa-headset"></i>
+      <h3>24/7 Support</h3>
+      <p>We’re just a call away — before, during, and after your journey.</p>
+    </div>
+  </div>
+</section>
+  <!-- Why Chose US Ends -->
+
+<!-- About US -->
+ <!-- Our Journey -->
+ <section id="about-us">
+  <div class="about-container">
+    <div class="about-content">
+      <span class="about-subtitle">More About Us</span>
+      <h2 class="about-title">OUR JOURNEY</h2>
+    <p>
+      Travelopedia is one of the most famous travel agencies in West Bengal since 2020, especially in the domestic tour, We also would like to take the opportunity to thank everyone who stood by us and made us what we are today and it would definitely not be possible without our dedicated and efficient team who works tirelessly to bring a smile on our travellers. As we stepped into our 5th year Travelopedia has come a long way and with various ups and downs, we proudly claim ourselves to be a brand in the travel industry in the eastern region of India with more than 100 departures a year. We are comfortable also in tour design, hotel booking, car rental etc. It gives us happiness to take people to the destinations they have dreamed of and blessing and good wishes to everyone who has been associated with us. We assure you of our best services.
+    </p>
+        </div>
+        <div class="about-image">
+          <img src="Photo/about us 1.png" alt="About Us">
+        </div>
+      </div>
+      <!-- Mission & Vision Section -->
+       <div class="mission-container">
+        <div class="mission-image">
+          <img src="Photo/our vision.jpg" alt="Our Misiion">
+        </div>
+        <div class="mission-content">
+          <h2 class="mission-title">OUR MISSION & VISION</h2>
+          <P>
+            We aim to create the most trusted and prompt travel portal handling all types of Domestic and International tours. Our Mission is Simple: to Offer Reliable, Satisfying and Safe Travel Experiences. At Travelopedia, We strive to facilitate this for customers across all destinations.
+          </P>
+          <p>
+            Customer Care is at the Core of Travelopedia. With Our User-Friendly Website, Reliable Responses and 24x7 Support. We are commited to providing the Best Travel Assistance. Our Vision is to Expand Globally making Travelopedia a One-Stop Solution for travelers, offfering Well-Planned, Affordable and Memorable Journeys. 
+          </p>
+          <a href="#contact" class="btn-contact">Contact Us</a>
+        </div>
+       </div>
+ </section>
+<!-- About US End -->
+
+
+  <!-- FAQ Section -->
+   <section id="FAQ">
+  <section class="faq-section">
+  <h2 class="faq-heading">F A Q</h2>
+  <div class="accordion" id="faqAccordion">
+    <!-- FAQ Main Section -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+          What does Travelopedia Mean?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Travelopedia, as a social travel community, gives more importance to community building and bringing together like-minded people. The travelers you are traveling with will be people of your own age and those who carry the love for traveling and exploring places like you!
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+          What are the Destinations that Travelopedia covers?
+        </button>
+      </h2>
+      <div id="faq2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Travelopedia covers a wide range of products. We offer group departures to North India and North East India, conduct bike and backpacking trips, weekend getaways, All Girls trips, International Escapes, Himalayan Treks, Corporate Tours, Customized International and Domestic Tours.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+          How experienced are Travelopedia's Trip Captains?
+        </button>
+      </h2>
+      <div id="faq3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          All of our key trip leaders are certified with AMC or BMC qualifications and are trained in first-aid procedures to ensure the safety of the travelers. They will ensure that you are having a worry-free journey.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+          I am a solo Traveler, can I join one of your Group departures?
+        </button>
+      </h2>
+      <div id="faq4" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Of course, you can. Many of our travelers join the group departures as solo wanderlusts and find their tribe and vibe during the journey only. The hand-picked stay options and carefully curated itineraries will help you explore some self-time to yourself. This makes Travelopedia the best travel community for solo travelers in India.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+          Will you be helping me with Visas as well?
+        </button>
+      </h2>
+      <div id="faq5" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, we will assist you with your visa documentation for a fee. This is to ensure that your documentation is done right and you have got all the proofs required. Do keep in mind that the issuance of visa is solely based on the visa assessing officer! We cannot guarantee visa issuance. 
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSix">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+          Which are the International Destinations Travelopedia operates?
+        </button>
+      </h2>
+      <div id="faq6" class="accordion-collapse collapse" aria-labelledby="headingsix" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Travelopedia’s International section opens a door to the international world. Travelopedia is actively curating trips to Dubai, Thailand, Maldives, Bali, Vietnam and many more countries. Check out our International listing page to explore the options that are revolving around you.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</section>
+  <!-- FAQ Section End -->
+
+   <!-- Footer Section -->
+  <footer class="custom-footer text-white py-5">
+  <div class="container">
+    
+    <!-- Contact Us -->
+    <div class="mb-4">
+      <h5 class="footer-title">CONTACT US</h5>
+      <p>You can visit our office directly or contact us via email or phone:</p>
+      <p><i class="fas fa-map-marker-alt me-2"></i>2/2 Nilkantha Pally, Near Link Road, Durgapur, Pin-713213 (West Bengal), INDIA</p>
+      <p><i class="fas fa-phone me-2"></i>+91 7866040083</p>
+      <p><i class="fas fa-envelope me-2"></i>contact@travelopedia.net.in</p>
+    </div>
+
+    <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+      <!-- Follow Us + Icons -->
+      <div class="social-icons mb-3 mb-md-0 text-center text-md-start">
+        <h5 class="footer-title">FOLLOW US</h5>
+        <a href="https://www.facebook.com/suranjit.saha.14" class="social-icon me-3"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://www.instagram.com/photogenist_0_o" class="social-icon me-3"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/suranjit-saha-344b1b308" class="social-icon me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://www.x.com/SuranjitSa15378" class="social-icon"><i class="fab fa-x-twitter fa-2x"></i></a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="copyright text-center text-md-end">
+        <p class="mb-0">© 2025 TRAVELOPEDIA PVT. LTD.</p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+   <!-- Footer End -->
+
+  <!-- Bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <!-- Bootstrap js End -->
+
+  <!-- Own Custom js -->
+   <script src="script.js"></script>
+   <!-- Own Custom js -->
+</body>
+</html>

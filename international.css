@@ -1,0 +1,215 @@
+/* Body */
+body.international-page 
+{
+  background-image: url(Photo/international\ bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+}
+body.international-page::before
+{
+  content: "";
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 0.383);
+  z-index: -1;
+}
+/* Body End*/
+
+/* Navbar */
+.navbar-brand
+{
+  padding-left: 15px;
+  font-weight: 700;
+}
+.nav-color-setting 
+{
+  background-color: #FFF2E0 !important;
+}
+.nav-item {
+  margin-right: 30px;
+  text-align: center;
+  font-weight: 600;
+  color: #3674B5;
+}
+.nav-link 
+{
+  color: rgb(55, 158, 249);
+}
+.nav-link.active 
+{
+  font-weight: bold;
+  color: #0047ab !important;
+}
+.nav-item i 
+{
+  margin-right: 5px;
+}
+/* Navbar End */
+
+/* Hero Section */
+.hero-banner
+{
+    background-position: center;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+}
+.hero-banner h1
+{
+    font-size: 40px;
+    margin-top: 25px;
+    font-weight: bold;
+}
+.hero-banner p
+{
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* Hero Section End */
+
+
+/* International Banner Trips */
+#international-banner-trips {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 5%;
+}
+
+.trip-banner {
+  position: relative;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+}
+
+.trip-banner:hover {
+  transform: scale(1.02);
+}
+
+.trip-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+  padding: 30px;
+  color: #fff;
+  width: 100%;
+}
+
+.trip-overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.trip-overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.trip-overlay a {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Buttons */
+.btn-book {
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: #fff;
+}
+.btn-book:hover {
+  background: linear-gradient(90deg, #dd2476, #ff512f);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.btn-details {
+  background: linear-gradient(90deg, #11998e, #38ef7d);
+  color: #fff;
+}
+.btn-details:hover {
+  background: linear-gradient(90deg, #38ef7d, #11998e);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .trip-banner {
+    height: 320px;
+  }
+  .trip-overlay h2 {
+    font-size: 1.5rem;
+  }
+  .trip-overlay p {
+    font-size: 1rem;
+  }
+}
+
+/* Home Button */
+.back-home 
+{
+  text-align: center;
+  margin: 20px 10px;
+}
+.btn-home 
+{
+  display: inline-block;
+  padding: 15px 35px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.btn-home:hover 
+{
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
+  transform: translateY(-6px) scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 20px rgba(255,106,0,0.7), 0 0 40px rgba(238,9,121,0.6);
+  color: #fff;
+  letter-spacing: 1px;
+}
+/* Home Button End */
+
+/* Footer */
+.custom-footer 
+{
+  background-color: #1c1c1c;
+  border-top: 2px solid #444;
+  font-size: 0.95rem;
+}
+.social-icon 
+{
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icon:hover 
+{
+  transform: scale(1.2);
+  color: #ffd700;
+}
+/* Footer End */

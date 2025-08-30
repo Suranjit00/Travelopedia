@@ -1,0 +1,270 @@
+/* Body */
+body.domestic-page 
+{
+  background-image: url(Photo/domestic\ bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+}
+body.domestic-page::before
+{
+  content: "";
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+/* Body End*/
+
+/* Navbar */
+.navbar-brand
+{
+  padding-left: 15px;
+  font-weight: 700;
+}
+.nav-color-setting 
+{
+  background-color: #FFF2E0 !important;
+}
+.nav-item {
+  margin-right: 30px;
+  text-align: center;
+  font-weight: 600;
+  color: #3674B5;
+}
+.nav-link 
+{
+  color: rgb(55, 158, 249);
+}
+.nav-link.active 
+{
+  font-weight: bold;
+  color: #0047ab !important;
+}
+.nav-item i 
+{
+  margin-right: 5px;
+}
+/* Navbar End */
+
+/* Hero Section */
+.hero-banner
+{
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+.hero-banner h1
+{
+    font-size: 40px;
+    font-weight: bold;
+}
+.hero-banner p
+{
+    font-size: 22px;
+    margin-top: 10px;
+}
+/* Hero Section End */
+
+/* Card Section */
+.card-container 
+{
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.tour-card 
+{
+  position: relative;
+  width: 350px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 12px;
+  opacity: 90%;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.tour-card img 
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.tour-card:hover img 
+{
+  transform: scale(1.2);
+}
+.tour-info 
+{
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+  transition: bottom 0.4s ease;
+}
+.tour-card:hover .tour-info 
+{
+  bottom: 0;
+}
+.tour-info h3 
+{
+  margin: 0 0 10px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.tour-info .duration 
+{
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+.tour-info ul 
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+.tour-info ul li 
+{
+  margin: 5px 0;
+}
+
+/* Buttons inside details */
+.trip-buttons 
+{
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.trip-buttons a 
+{
+  background: #ffcc00;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.trip-buttons a.btn-contact 
+{
+  background: #00bfff;
+  color: #fff;
+}
+.trip-buttons a.btn-book
+{
+  background: #116f00;
+  color: #fff;
+}
+.trip-buttons a:hover 
+{
+  background: #ffa500;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+/* Card Section End */
+
+/* Back Button */
+.back-to-home
+{
+  justify-content: right;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  will-change: transform, box-shadow;
+}
+.back-to-home a 
+{
+  background: linear-gradient(90deg, #21b66e, #2d6ed7);
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  padding: 13px 40px;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+.back-to-home a:hover 
+{
+  
+  background-color: #00bec4;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Weather Map */
+.weather-card 
+{
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin: 50px auto;
+  text-align: center;
+  justify-content: center;
+}
+.weather-card h3 
+{
+  color: rgb(103, 197, 255);
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+  font-size: 1.45rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 1.2;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.weather-card iframe 
+{
+  border-radius: 12px;
+  width: 800px;
+  height: 500px;
+}
+/* Weather Map End */
+
+/* Footer */
+.custom-footer 
+{
+  background-color: #1c1c1c;
+  border-top: 2px solid #444;
+  font-size: 0.95rem;
+}
+.social-icon 
+{
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icon:hover 
+{
+  transform: scale(1.2);
+  color: #ffd700;
+}
+/* Footer End */
