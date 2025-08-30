@@ -22,62 +22,6 @@
   z-index: 9999;
 }
 
-/* Popup Container Box */
-.popup-box {
-  width: 75%;
-  max-width: 1000px;
-  background: white;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-/* Animate Popup */
-.popup-box.animate-popup
-{
-  animation: popupFadeSlide 0.6s ease-out forwards;
-}
-
-@keyframes popupFadeSlide 
-{
-  0% 
-  {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-  100% 
-  {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* close button */
-.popup-close 
-{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.05);
-  border: none;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  z-index: 10000;
-  cursor: pointer;
-}
-
-/* Make image Responsive */
-.popup-box img 
-{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* Mini Navbar */
 .top-navbar 
 {

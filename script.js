@@ -7,11 +7,6 @@ function togglePassword(inputId, btn)
   btn.textContent = isPassword ? '🙈' : '🐵';
 }
 
-// Popup show on load
-window.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("popupModal").style.display = "flex";
-});
-
 // Close popup
 function closePopup() 
 {
